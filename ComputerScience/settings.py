@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ComputerScience.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd4jc3pmr5k594h',
+        'USER': 'rpqiaccwkmskbr',
+        'PASSWORD': '82aa2ca63b12aed24e74b8b9e6ad5a82af6d52ea9c2f77d582dd5342eb54824c',
+        'HOST': 'ec2-52-213-167-210.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
