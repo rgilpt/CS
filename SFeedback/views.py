@@ -4,7 +4,7 @@ from django.shortcuts import render,  get_object_or_404, redirect
 from django.http import HttpResponse
 from django.template import loader
 
-# from SFeedback.models import Question, Answer, Student
+from SFeedback.models import Question, Student
 #
 # from SFeedback.forms import AnswerForm, StudentForm, LikesForm, ExtrasForm, DislikesForm
 
@@ -15,11 +15,11 @@ def index(request):
     return HttpResponse(template.render(output, request))
 
 
-# def questionnaire(request):
-#     questions = Question.objects.all()
-#     output = {'questions': questions}
-#     template = loader.get_template('questions.html')
-#     return HttpResponse(template.render(output, request))
+def questionnaire(request):
+    questions = Question.objects.all()
+    output = {'questions': questions}
+    template = loader.get_template('questions.html')
+    return HttpResponse(template.render(output, request))
 #
 #
 # def student_form(request):
