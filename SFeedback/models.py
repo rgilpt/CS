@@ -21,11 +21,11 @@ class Student(models.Model):
             return self.name
 
 
-# class Answer(models.Model):
-#     question_id = models.ForeignKey(Question, blank=True, null=True, on_delete=models.CASCADE)
-#     answer_text = models.CharField(max_length=1000)
-#     student_id = models.ForeignKey(Student, blank=True, null=True, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return self.answer_text
+class Answer(models.Model):
+    question_id = models.ForeignKey(Question, blank=True, null=True, on_delete=models.CASCADE)
+    answer_text = models.CharField(max_length=1000)
+    student_id = models.ForeignKey(Student, blank=True, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.answer_text
 
